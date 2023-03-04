@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("./assets/quickChat.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#app {
+  max-width: 100vw;
+  min-height: 100vh;
+  background: rgba(52, 53, 65, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#chat_container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: rgba(64, 65, 79, 0.5);
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+
+  background: #2ea5dc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37f;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+
+  color: #dcdcdc;
+  font-size: 20px;
+
+  max-width: 100%;
+  overflow-x: scroll;
+
+  /*
+   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
+   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
+   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
+   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
+  */
+  white-space: pre-wrap; 
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #40414F;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+
+  color: #fff;
+  font-size: 18px;
+
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+/* Navigation Start */
+#navigation{
+  /* position: fixed;
+  z-index: 10; */
+  width: 100%;
+  background: #0f0e0e;
+}
+#navigation .logoBox{
+  height: 50px;
+  width: 90px;
+  background-image: url("assets/APD.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.navbar{
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+.navbar-brand{
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #262626;
+}
+.nav-item{
+  /* font-family: 'Dancing Script', cursive; */
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+.navbar-nav .nav-item:hover .nav-link,
+.navbar-nav .nav-item.active .nav-link{
+  text-decoration: underline;
+}
+.navbar-nav .nav-item .nav-link{
+  color: #eeeeee;
+  padding: 5px 15px;
+}
+.navbar .navbar-toggler{
+  border: none;
+  color: #333;
+  border: 2px solid #7f7f7f;
+  border-radius: none;
+  outline: none;
+}
+
+
+
+@media all and (min-width: 992px) {
+.navbar .nav-item .dropdown-menu{ display: none; }
+
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
+.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+@media (max-width: 800px) {
+  .navbar-nav .nav-item .nav-link{
+      font-weight: bolder;
+  }
+}
+/* End Navigation */
+/* banner start */
+#banner{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: url("./assets/bg2.png") no-repeat;
+  background-position: right;
+  background-size: cover; */
+}
+#banner img{
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+}
+#banner .banner-title h1{
+  color: #e1e1e1;
+  font-size: 46px;
+}
+#banner .banner-title h3{
+  margin-top: 20px;
+  margin-bottom: 25px;
+  line-height: 24px;
+  color: #e1e1e1;
+}
+
+#banner .banner-title p{
+  color: #e1e1e1;
+}
+
+@media screen and (max-width:330px) {
+  #banner .banner-title h1{
+      margin-top: 55%;
+      font-size: 27px;
+  }
+  #banner .banner-title h3{
+      font-size: 16px;
+  }
+  #banner .banner-title p{
+    font-size: 14px;
+  }
+}
+/* End Banner */
